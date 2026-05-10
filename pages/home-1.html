@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailFlow | Freelance Email Automation Specialist</title>
+    <meta name="description" content="Premium Email Automation services for Klaviyo and Mailchimp. Scale your e-commerce revenue with data-driven flows and campaigns.">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg"><link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+            
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="home-1.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme"><i class="ri-moon-line"></i></button>
+                <button class="icon-btn" id="rtl-toggle" title="Toggle RTL"><i class="ri-translate-2"></i></button>
+                <a href="contact.html" class="btn btn-primary">Book Strategy Call</a>
+                <div class="mobile-toggle" id="mobile-toggle"><i class="ri-menu-line"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+            <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="pages/home-2.html">Home 2</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/case-studies.html">Case Studies</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><hr style="margin: 15px 0; border-color: var(--border);"></li>
+            <li><a href="pages/login.html">Login</a></li>
+            <li><a href="pages/signup.html">Signup</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="hero" style="background-image: url('https://images.pexels.com/photos/7709101/pexels-photo-7709101.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <span class="badge" style="background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; display: inline-block;">Klaviyo & Mailchimp Expert</span>
+                    <h1>Scale Your Revenue With Data-Driven Automation</h1>
+                    <p style="font-size: 1.2rem; margin-bottom: 30px;">We build high-converting email ecosystems that turn subscribers into lifelong customers. 30% revenue lift guaranteed.</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                        <a href="services.html" class="btn btn-primary">Our Services <i class="ri-arrow-right-line"></i></a>
+                        <a href="portfolio.html" class="btn btn-outline hero-btn">View Portfolio</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div>
+                            <h3><span class="counter" data-target="500">0</span>+</h3>
+                            <p>Flows Created</p>
+                        </div>
+                        <div>
+                            <h3><span class="counter" data-target="150">0</span>M+</h3>
+                            <p>Emails Sent</p>
+                        </div>
+                        <div>
+                            <h3>$<span class="counter" data-target="12">0</span>M+</h3>
+                            <p>Client Revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-dashboard floating reveal" style="position: absolute; right: 5%; top: 55%; transform: translateY(-50%); width: 40%; display: none;">
+                    <!-- Floating dashboard placeholder -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Dashboard" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 4px solid var(--glass-border);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Services Overview -->
+        <section id="services">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Automated Growth Engine</h2>
+                    <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Comprehensive email strategies designed to maximize customer lifetime value and drive repeat sales.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- Card 1 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px; transition: var(--transition);">
+                        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?auto=format&fit=crop&q=80&w=200" alt="Klaviyo Flows" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">Advanced Flow Setup</h3>
+                        <p style="color: var(--text-muted);">Welcome series, abandoned cart, browse abandonment, and post-purchase win-backs optimized for conversion.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=200" alt="Segmentation" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">Hyper-Segmentation</h3>
+                        <p style="color: var(--text-muted);">Targeting customers based on behavior, purchase history, and engagement levels for 2x higher open rates.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=200" alt="Campaigns" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">Campaign Management</h3>
+                        <p style="color: var(--text-muted);">Full-service campaign planning, design, and execution for holidays, product launches, and weekly updates.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=200" alt="A/B Testing" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">Continuous A/B Testing</h3>
+                        <p style="color: var(--text-muted);">Testing subject lines, copy, layouts, and send times to ensure every email performs at its absolute peak.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=200" alt="Deliverability" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">List Hygiene & Health</h3>
+                        <p style="color: var(--text-muted);">Inbox placement optimization, list cleaning, and warming up sender profiles for maximum reach.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=200" alt="Reporting" style="width: 80px; height: 80px; border-radius: 15px; margin-bottom: 20px; object-fit: cover;">
+                        <h3 style="margin-bottom: 15px;">Revenue Attribution</h3>
+                        <p style="color: var(--text-muted);">Detailed reporting and revenue dashboards showing exactly how much money your emails are generating.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Automation Flow Showcase -->
+        <section style="background: var(--bg-card);">
+            <div class="container">
+                <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;" class="reveal">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Built-in Intelligence for Every Click</h2>
+                        <p style="margin-bottom: 25px; color: var(--text-muted);">We don't just send emails; we build intelligent decision trees that respond to your customers' actions in real-time. Our workflows are designed to nurture leads and re-engage dormant buyers automatically.</p>
+                        <ul style="list-style: none; margin-bottom: 30px;">
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;"><i class="ri-checkbox-circle-fill" style="color: var(--primary); font-size: 1.2rem;"></i> Multi-stage Welcome Experience</li>
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;"><i class="ri-checkbox-circle-fill" style="color: var(--primary); font-size: 1.2rem;"></i> Dynamic Product Recommendations</li>
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;"><i class="ri-checkbox-circle-fill" style="color: var(--primary); font-size: 1.2rem;"></i> Tiered Loyalty & Reward Triggers</li>
+                        </ul>
+                        <a href="pages/portfolio.html" class="btn btn-primary">See Flow Examples</a>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;" class="reveal">
+                        <div class="glass floating" style="padding: 20px; border-radius: 30px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" alt="Automation Architecture" style="width: 100%; border-radius: 20px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Campaign Metrics -->
+        <section style="background-image: linear-gradient(180deg, var(--bg-card), var(--bg-body));">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Real Results, Real Revenue</h2>
+                    <p style="color: var(--text-muted);">We track every open, click, and conversion to ensure ROI.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                        <h4 style="color: var(--primary); font-size: 2rem; margin-bottom: 10px;">45%</h4>
+                        <p style="font-weight: 600;">Avg. Open Rate</p>
+                    </div>
+                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                        <h4 style="color: var(--secondary); font-size: 2rem; margin-bottom: 10px;">8.2%</h4>
+                        <p style="font-weight: 600;">Avg. Click Rate</p>
+                    </div>
+                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                        <h4 style="color: var(--accent); font-size: 2rem; margin-bottom: 10px;">35%</h4>
+                        <p style="font-weight: 600;">Revenue from Email</p>
+                    </div>
+                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                        <h4 style="color: var(--primary); font-size: 2rem; margin-bottom: 10px;">12x</h4>
+                        <p style="font-weight: 600;">ROI for Clients</p>
+                    </div>
+                </div>
+
+                <div class="reveal" style="margin-top: 50px; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" alt="Analytics Chart" style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Success Stories -->
+        <section>
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Trusted by Global E-commerce Brands</h2>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <div style="display: flex; gap: 2px; color: #fbbf24; margin-bottom: 20px;">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 25px; font-size: 1.1rem;">"They transformed our Klaviyo setup in 30 days. Our revenue from flows jumped from 12% to 34% almost overnight."</p>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div>
+                                <h4 style="font-size: 1rem;">James Wilson</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Founder, Luxe Threads</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
+                        <div style="display: flex; gap: 2px; color: #fbbf24; margin-bottom: 20px;">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 25px; font-size: 1.1rem;">"The segmentation strategy alone was worth the investment. Finally, our customers are getting relevant content."</p>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div>
+                                <h4 style="font-size: 1rem;">Sarah Chen</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Marketing Director, GlowUp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Newsletter/CTA -->
+        <section style="padding-bottom: 0;">
+            <div class="container">
+                <div class="glass reveal" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 80px; border-radius: 40px 40px 0 0; text-align: center; border-bottom: none;">
+                    <h2 style="color: white; font-size: 3rem; margin-bottom: 20px;">Ready to automate your growth?</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Join 50+ brands scaling with EmailFlow. Book your free 30-min strategy audit today.</p>
+                    
+                    <form style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;" class="reveal">
+                        <input type="email" placeholder="Your work email" style="flex: 1; padding: 15px 25px; border-radius: 50px; border: none; outline: none; font-size: 1rem;">
+                        <button type="submit" class="btn" style="background: #0f172a; color: white;">Get Started</button>
+                    </form>
+                    
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">No credit card required. Cancel anytime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="logo" style="margin-bottom: 20px; "><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+                    <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for scaling e-commerce brands. We turn your email list into a revenue machine.</p>
+                    <div class="social-links">
+                        <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/portfolio.html">Portfolio</a></li>
+                        <li><a href="pages/case-studies.html">Case Studies</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/services.html">Email Automation</a></li>
+                        <li><a href="pages/services.html">Campaign Management</a></li>
+                        <li><a href="pages/services.html">List Growth</a></li>
+                        <li><a href="pages/services.html">Deliverability Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/pricing.html">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Get the latest email marketing tips delivered to your inbox.</p>
+                    <form style="display: flex; gap: 5px;">
+                        <input type="email" placeholder="Email" style="padding: 10px 15px; border-radius: 5px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); width: 100%;">
+                        <button class="btn btn-primary" style="padding: 10px;"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

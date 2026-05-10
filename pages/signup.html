@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Join EmailFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg"><link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body { height: 100vh; overflow-y: auto; display: flex; }
+        .login-container { display: flex; width: 100%; min-height: 100vh; }
+        .login-banner { flex: 1; background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200') center/cover; position: relative; }
+        .login-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(168, 85, 247, 0.9), rgba(244, 63, 94, 0.7)); }
+        .banner-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 10%; color: white; }
+        .login-form-side { flex: 1.2; display: flex; align-items: center; justify-content: center; padding: 50px 5%; background: var(--bg-body); }
+        .login-card { width: 100%; max-width: 550px; padding: 50px; border-radius: 30px; box-shadow: var(--shadow); background: var(--bg-card); }
+        @media (max-width: 1024px) { .login-banner { display: none; } }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-banner">
+            <div class="banner-content">
+                <a href="../index.html" class="logo" style="color: white; -webkit-text-fill-color: white; margin-bottom: 40px;"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+                <h1 style="color: white; font-size: 3rem;">Join 500+ High-Growth Brands.</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 20px;">Unlock the power of expert automation today.</p>
+                <div style="margin-top: 50px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <i class="ri-checkbox-circle-fill" style="font-size: 1.5rem;"></i>
+                        <span>30-Day Free Audit Access</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <i class="ri-checkbox-circle-fill" style="font-size: 1.5rem;"></i>
+                        <span>Revenue Tracking Dashboard</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-form-side">
+            <div class="login-card glass">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h2>Create Account</h2>
+                    <p style="color: var(--text-muted);">Start your 14-day free trial</p>
+                </div>
+                
+                <form action="dashboard.html" style="display: grid; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="display: grid; gap: 8px;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">First Name</label>
+                            <input type="text" placeholder="John" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main);">
+                        </div>
+                        <div style="display: grid; gap: 8px;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Last Name</label>
+                            <input type="text" placeholder="Doe" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main);">
+                        </div>
+                    </div>
+                    <div style="display: grid; gap: 8px;">
+                        <label style="font-weight: 600; font-size: 0.9rem;">Work Email</label>
+                        <input type="email" placeholder="john@company.com" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main);">
+                    </div>
+                    <div style="display: grid; gap: 8px;">
+                        <label style="font-weight: 600; font-size: 0.9rem;">Password</label>
+                        <input type="password" placeholder="••••••••" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main);">
+                        <div style="height: 4px; background: var(--border); border-radius: 2px; margin-top: 5px;">
+                            <div style="width: 60%; height: 100%; background: #fbbf24; border-radius: 2px;"></div>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Password strength: Medium</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding: 15px; border-radius: 12px;">Create Account</button>
+                </form>
+
+                <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-muted);">
+                    Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Login</a>
+                </p>
+
+                <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px;">
+                    <button class="icon-btn" id="theme-toggle"><i class="ri-moon-line"></i></button>
+                    <button class="icon-btn" id="rtl-toggle"><i class="ri-translate-2"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
