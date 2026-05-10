@@ -5,78 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | EmailFlow Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg"><link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        body { height: 100vh; overflow: hidden; display: flex; }
-        .login-container { display: flex; width: 100%; height: 100%; }
-        .login-banner { flex: 1.2; background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200') center/cover; position: relative; }
-        .login-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.7)); }
-        .banner-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 10%; color: white; }
-        .login-form-side { flex: 1; display: flex; align-items: center; justify-content: center; padding: 5%; background: var(--bg-body); }
+        body { min-height: 100vh; background: var(--bg-body); display: flex; align-items: center; justify-content: center; padding: 20px; }
         .login-card { width: 100%; max-width: 450px; padding: 50px; border-radius: 30px; box-shadow: var(--shadow); background: var(--bg-card); }
-        @media (max-width: 1024px) { .login-banner { display: none; } }
+        .logo-center { display: flex; justify-content: center; margin-bottom: 30px; }
     </style>
 </head>
 <body>
-
-    <div class="login-container">
-        <div class="login-banner">
-            <div class="banner-content">
-                <a href="../index.html" class="logo" style="color: white; -webkit-text-fill-color: white; margin-bottom: 40px;"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
-                <h1 style="color: white; font-size: 3.5rem;">Welcome Back to Your Growth Hub.</h1>
-                <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 20px;">Access your real-time revenue analytics and automation performance.</p>
-            </div>
-        </div>
-        <div class="login-form-side">
-            <div class="login-card glass">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h2>Login</h2>
-                    <p style="color: var(--text-muted);">Enter your credentials to continue</p>
+    <div style="position: fixed; top: 30px; right: 30px; display: flex; gap: 15px; z-index: 1000;">
+        <button class="icon-btn" id="theme-toggle"><i class="ri-moon-line"></i></button>
+        <button class="btn btn-outline" id="rtl-toggle" style="padding: 0 15px; height: 40px; border-radius: 12px; font-size: 0.8rem; font-weight: 700;">RTL</button>
                 </div>
-                
-                <form action="dashboard.html" style="display: grid; gap: 20px;">
-                    <div style="display: grid; gap: 8px;">
-                        <label style="font-weight: 600; font-size: 0.9rem;">Email Address</label>
-                        <input type="email" placeholder="name@company.com" required style="padding: 15px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
-                    </div>
-                    <div style="display: grid; gap: 8px;">
-                        <label style="font-weight: 600; font-size: 0.9rem;">Password</label>
-                        <input type="password" placeholder="••••••••" required style="padding: 15px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
-                    </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
-                        <label style="display: flex; gap: 8px; cursor: pointer;"><input type="checkbox"> Remember me</label>
-                        <a href="#" style="color: var(--primary); text-decoration: none;">Forgot password?</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="padding: 15px; border-radius: 12px;">Login <i class="ri-login-box-line"></i></button>
-                </form>
+    <div class="login-card glass">
+        <div class="logo-center">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.svg" alt="Logo" class="logo-icon">
+                <span class="brand-name">EmailFlow.</span>
+            </a>
+                </div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2>Welcome Back</h2>
+            <p style="color: var(--text-muted);">Enter your credentials to continue</p>
+                </div>
+        
+        <form action="dashboard.html" style="display: grid; gap: 20px;">
+            <div style="display: grid; gap: 8px;">
+                <label style="font-weight: 600; font-size: 0.9rem;">Email Address</label>
+                <input type="email" placeholder="name@company.com" required style="padding: 15px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
+                </div>
+            <div style="display: grid; gap: 8px;">
+                <label style="font-weight: 600; font-size: 0.9rem;">Password</label>
+                <input type="password" placeholder="********" required style="padding: 15px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
+                </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                <label style="display: flex; gap: 8px; cursor: pointer;"><input type="checkbox"> Remember me</label>
+                <a href="#" style="color: var(--primary); text-decoration: none;">Forgot password?</a>
+                </div>
+            <button type="submit" class="btn btn-primary" style="padding: 15px; border-radius: 12px; width: 100%;">Login <i class="ri-login-box-line"></i></button>
+        </form>
 
-                <div style="margin: 30px 0; text-align: center; position: relative;">
-                    <span style="background: var(--bg-card); padding: 0 15px; position: relative; z-index: 2; color: var(--text-muted); font-size: 0.9rem;">OR CONTINUE WITH</span>
-                    <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border);"></div>
+        <div style="margin: 30px 0; text-align: center; position: relative;">
+            <span style="background: var(--bg-card); padding: 0 15px; position: relative; z-index: 2; color: var(--text-muted); font-size: 0.9rem;">OR CONTINUE WITH</span>
+            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border);"></div>
                 </div>
 
                 <div style="display: flex; gap: 15px;">
-                    <button class="icon-btn" style="flex: 1; border-radius: 12px; width: auto;"><i class="ri-google-fill"></i></button>
-                    <button class="icon-btn" style="flex: 1; border-radius: 12px; width: auto;"><i class="ri-linkedin-box-fill"></i></button>
+            <button class="icon-btn" style="flex: 1; border-radius: 12px; width: auto; color: #DB4437;"><i class="ri-google-fill"></i></button>
+            <button class="icon-btn" style="flex: 1; border-radius: 12px; width: auto; color: #1877F2;"><i class="ri-facebook-fill"></i></button>
+            <button class="icon-btn" style="flex: 1; border-radius: 12px; width: auto; color: var(--text-main);"><i class="ri-apple-fill"></i></button>
                 </div>
 
-                <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-muted);">
-                    Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Sign up</a>
-                </p>
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-muted);">
+            Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Sign up</a>
+        </p>
 
-                <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px;">
-                    <button class="icon-btn" id="theme-toggle"><i class="ri-moon-line"></i></button>
-                    <button class="icon-btn" id="rtl-toggle"><i class="ri-translate-2"></i></button>
                 </div>
-            </div>
-        </div>
-    </div>
 
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
-
 
 

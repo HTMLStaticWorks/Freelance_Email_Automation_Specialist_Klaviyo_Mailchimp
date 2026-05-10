@@ -1,35 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle
-    const themeBtn = document.getElementById('theme-toggle');
+    const themeBtns = document.querySelectorAll('#theme-toggle, .theme-toggle-btn');
     const html = document.documentElement;
     const currentTheme = localStorage.getItem('theme') || 'light';
     
     html.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
+    updateThemeIcons(currentTheme);
 
-    themeBtn?.addEventListener('click', () => {
-        const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
     });
 
-    function updateThemeIcon(theme) {
-        const icon = themeBtn?.querySelector('i');
-        if (icon) {
-            icon.className = theme === 'light' ? 'ri-moon-line' : 'ri-sun-line';
-        }
+    function updateThemeIcons(theme) {
+        themeBtns.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.className = theme === 'light' ? 'ri-moon-line' : 'ri-sun-line';
+            }
+        });
     }
 
     // RTL Toggle
-    const rtlBtn = document.getElementById('rtl-toggle');
+    const rtlBtns = document.querySelectorAll('#rtl-toggle, .rtl-toggle-btn');
     const currentDir = localStorage.getItem('dir') || 'ltr';
     html.setAttribute('dir', currentDir);
 
-    rtlBtn?.addEventListener('click', () => {
-        const newDir = html.getAttribute('dir') === 'ltr' ? 'rtl' : 'ltr';
-        html.setAttribute('dir', newDir);
-        localStorage.setItem('dir', newDir);
+    rtlBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const newDir = html.getAttribute('dir') === 'ltr' ? 'rtl' : 'ltr';
+            html.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+        });
     });
 
     // Sticky Header
@@ -39,6 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+        }
+    });
+
+    // Active Navigation Highlight
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav ul li a, .mobile-nav ul li a');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath) {
+            const fileName = linkPath.split('/').pop();
+            const currentFileName = currentPath.split('/').pop() || 'index.html';
+
+            if (fileName === currentFileName) {
+                link.classList.add('active');
+            }
         }
     });
 
