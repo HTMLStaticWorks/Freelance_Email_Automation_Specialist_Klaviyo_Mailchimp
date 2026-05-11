@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../assets/js/theme-init.js"></script>
     <title>Dashboard | EmailFlow Analytics</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg"><link rel="stylesheet" href="../assets/css/style.css">
@@ -455,17 +456,8 @@
                 });
             });
 
-            // RTL Toggle
-            const rtlBtnText = document.getElementById('rtl-toggle-text');
-            const html = document.documentElement;
-
-            rtlBtnText?.addEventListener('click', () => {
-                const isRtl = html.getAttribute('dir') === 'rtl';
-                const newDir = isRtl ? 'ltr' : 'rtl';
-                html.setAttribute('dir', newDir);
-                localStorage.setItem('dir', newDir);
-            });
         });
     </script>
+    <script src="../assets/js/theme.js"></script>
 </body>
 </html>

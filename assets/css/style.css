@@ -17,11 +17,28 @@
     --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     --glow: 0 0 20px rgba(99, 102, 241, 0.3);
     
+    /* Hero Section Defaults */
+    --hero-text: #ffffff;
+    --hero-overlay: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7));
+
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-theme="dark"] {
+.light-theme {
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-nav: rgba(255, 255, 255, 0.95);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --hero-text: #1e293b;
+    --hero-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+}
+
+.dark-theme {
     --bg-body: #0f172a;
     --bg-card: #1e293b;
     --bg-nav: rgba(15, 23, 42, 0.95);
@@ -31,6 +48,8 @@
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.05);
     --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    --hero-text: #f1f5f9;
+    --hero-overlay: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8));
 }
 
 /* RTL Support */
@@ -320,27 +339,28 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7));
+    background: var(--hero-overlay);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    color: #ffffff;
+    color: var(--hero-text);
     max-width: 900px;
     margin: 0 auto;
 }
 
 .hero-content h1 {
-    color: #ffffff;
+    color: var(--hero-text);
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.1;
     margin-bottom: 25px;
 }
 
 .hero-content p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--hero-text);
+    opacity: 0.9;
 }
 
 .hero-stats {
@@ -348,12 +368,12 @@ nav ul li a.active {
     display: flex;
     gap: 60px;
     justify-content: center;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid var(--border);
     padding-top: 30px;
 }
 
 .hero-stats h3 {
-    color: #ffffff;
+    color: var(--hero-text);
     font-size: 2.2rem;
     margin-bottom: 5px;
 }
@@ -361,10 +381,10 @@ nav ul li a.active {
 .hero-stats p {
     font-size: 0.95rem;
     opacity: 0.8;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--hero-text);
 }
 
-[data-theme="light"] .hero-content {
+.light-theme .hero-content {
     color: var(--text-main);
 }
 
@@ -445,10 +465,6 @@ footer {
     
     .header-actions a.btn-primary {
         display: none;
-    }
-    
-    .mobile-toggle {
-        display: block !important;
     }
     
     .mobile-toggle {

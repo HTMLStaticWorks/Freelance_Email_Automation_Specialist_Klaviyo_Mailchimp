@@ -1,43 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle
-    const themeBtns = document.querySelectorAll('#theme-toggle, .theme-toggle-btn');
-    const html = document.documentElement;
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    html.setAttribute('data-theme', currentTheme);
-    updateThemeIcons(currentTheme);
-
-    themeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcons(newTheme);
-        });
-    });
-
-    function updateThemeIcons(theme) {
-        themeBtns.forEach(btn => {
-            const icon = btn.querySelector('i');
-            if (icon) {
-                icon.className = theme === 'light' ? 'ri-moon-line' : 'ri-sun-line';
-            }
-        });
-    }
-
-    // RTL Toggle
-    const rtlBtns = document.querySelectorAll('#rtl-toggle, .rtl-toggle-btn');
-    const currentDir = localStorage.getItem('dir') || 'ltr';
-    html.setAttribute('dir', currentDir);
-
-    rtlBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const newDir = html.getAttribute('dir') === 'ltr' ? 'rtl' : 'ltr';
-            html.setAttribute('dir', newDir);
-            localStorage.setItem('dir', newDir);
-        });
-    });
-
     // Sticky Header
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
