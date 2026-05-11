@@ -12,24 +12,27 @@
         body { min-height: 100vh; background: var(--bg-body); display: flex; align-items: center; justify-content: center; padding: 20px; }
         .login-card { width: 100%; max-width: 550px; padding: 50px; border-radius: 30px; box-shadow: var(--shadow); background: var(--bg-card); }
         .logo-center { display: flex; justify-content: center; margin-bottom: 30px; }
+        .icon-btn:hover i { color: white !important; }
+        .hover-link { color: var(--primary); text-decoration: none; transition: var(--transition); }
+        .hover-link:hover { opacity: 0.7; text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div style="position: fixed; top: 30px; right: 30px; display: flex; gap: 15px; z-index: 1000;">
+    <div class="auth-controls">
         <button class="icon-btn" id="theme-toggle"><i class="ri-moon-line"></i></button>
-        <button class="btn btn-outline" id="rtl-toggle" style="padding: 0 15px; height: 40px; border-radius: 12px; font-size: 0.8rem; font-weight: 700;">RTL</button>
-                </div>
+        <button class="btn btn-outline" id="rtl-toggle" style="padding: 0 12px; height: 38px; border-radius: 10px; font-size: 0.75rem; font-weight: 700;">RTL</button>
+    </div>
     <div class="login-card glass">
         <div class="logo-center">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.svg" alt="Logo" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
                 </div>
         <div style="text-align: center; margin-bottom: 30px;">
-            <h2>Create Account</h2>
-            <p style="color: var(--text-muted);">Start your 14-day free trial</p>
-                </div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Create Account</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Start your 14-day free trial</p>
+        </div>
         
         <form action="dashboard.html" style="display: grid; gap: 20px;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
@@ -46,14 +49,30 @@
                 <label style="font-weight: 600; font-size: 0.9rem;">Work Email</label>
                 <input type="email" placeholder="john@company.com" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
                 </div>
-            <div style="display: grid; gap: 8px;">
-                <label style="font-weight: 600; font-size: 0.9rem;">Password</label>
-                <input type="password" placeholder="********" required style="padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none;">
-                <div style="height: 4px; background: var(--border); border-radius: 2px; margin-top: 5px;">
-                    <div style="width: 60%; height: 100%; background: #fbbf24; border-radius: 2px;"></div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div style="display: grid; gap: 8px;">
+                    <label style="font-weight: 600; font-size: 0.9rem;">Password</label>
+                    <div style="position: relative;">
+                        <input type="password" id="password" placeholder="********" required style="padding: 12px; padding-right: 40px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none; width: 100%;">
+                        <i class="ri-eye-off-line toggle-pass" data-target="password" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-muted);"></i>
+                    </div>
+                    <div style="height: 4px; background: var(--border); border-radius: 2px; margin-top: 5px;">
+                        <div style="width: 60%; height: 100%; background: #fbbf24; border-radius: 2px;"></div>
+                    </div>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Strength: Medium</span>
                 </div>
-                <span style="font-size: 0.75rem; color: var(--text-muted);">Password strength: Medium</span>
+                <div style="display: grid; gap: 8px;">
+                    <label style="font-weight: 600; font-size: 0.9rem;">Confirm Password</label>
+                    <div style="position: relative;">
+                        <input type="password" id="confirm-password" placeholder="********" required style="padding: 12px; padding-right: 40px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-main); outline: none; width: 100%;">
+                        <i class="ri-eye-off-line toggle-pass" data-target="confirm-password" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-muted);"></i>
+                    </div>
                 </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 0.85rem; color: var(--text-muted);">
+                <input type="checkbox" id="terms" style="margin-top: 3px;">
+                <label for="terms">I agree to the <a href="#" class="hover-link">Terms of Service</a> and <a href="#" class="hover-link">Privacy Policy</a></label>
+            </div>
             <button type="submit" class="btn btn-primary" style="padding: 15px; border-radius: 12px; width: 100%;">Create Account</button>
         </form>
 
@@ -69,13 +88,26 @@
                 </div>
 
         <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-muted);">
-            Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Login</a>
+            Already have an account? <a href="login.html" class="hover-link" style="font-weight: 700;">Login</a>
         </p>
 
                 </div>
 
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        // Password Visibility Toggles
+        document.querySelectorAll('.toggle-pass').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                toggle.classList.toggle('ri-eye-line');
+                toggle.classList.toggle('ri-eye-off-line');
+            });
+        });
+    </script>
 </body>
 </html>
 

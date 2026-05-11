@@ -16,7 +16,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span
-                    class="brand-name">EmailFlow.</span></a>
+                    class="brand-name">EmailFlow</span></a>
             <nav id="desktop-nav">
                 <ul>
                     <li><a href="../index.html">Home 1</a></li>
@@ -45,7 +45,7 @@
         <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
             <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
         </div>
@@ -73,12 +73,12 @@
     <main>
         <!-- Section 1: Hero Section -->
         <section class="hero"
-            style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=1920'); height: 35vh; min-height: 35vh;">
-            <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.9);"></div>
-            <div class="container" style="text-align: center;">
-                <div class="hero-content reveal" style="margin: 0 auto;">
+            style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=1920'); min-height: 45vh;">
+            <div class="hero-overlay"></div>
+            <div class="container" style="text-align: center; padding: 0 5%;">
+                <div class="hero-content reveal" style="margin: 0 auto; max-width: 800px;">
                     <h1>The Proof is in the Profit</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;">Detailed breakdowns of how we scaled brands from 10% to
+                    <p style="font-size: 1.1rem; opacity: 0.8; line-height: 1.5;">Detailed breakdowns of how we scaled brands from 10% to
                         40%+ revenue from email.</p>
                 </div>
             </div>
@@ -128,8 +128,8 @@
                 <div style="text-align: center; margin-bottom: 60px;" class="reveal">
                     <h2>Visualizing Success</h2>
                 </div>
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; flex-wrap: wrap;">
+                <div class="about-flex"
+                    style="display: flex; gap: 40px; flex-wrap: wrap;">
                     <div class="reveal">
                         <h3 style="margin-bottom: 20px;">The Challenge</h3>
                         <p style="color: var(--text-muted); margin-bottom: 30px;">A fast-growing skincare brand was
@@ -140,9 +140,9 @@
                             segmented by skin type and purchase frequency, coupled with a robust win-back sequence for
                             dormant customers.</p>
                     </div>
-                    <div class="reveal">
+                    <div class="reveal feature-image-card" style="border-radius: 20px; overflow: hidden;">
                         <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg" alt="Graph"
-                            style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -156,22 +156,22 @@
                     <p style="color: var(--text-muted);">How a single subject line test increased revenue by $15,000.
                     </p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div class="glass reveal" style="padding: 30px; border-radius: 20px;">
+                <div class="toolkit-grid reveal" style="display: grid; gap: 40px;">
+                    <div class="glass reveal" style="padding: 25px; border-radius: 24px; display: flex; flex-direction: column;">
                         <img src="https://images.pexels.com/photos/34007243/pexels-photo-34007243.jpeg" alt="Test A"
-                            style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span>Version A</span>
-                            <span style="color: var(--accent); font-weight: 700;">Control</span>
+                            style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <span style="font-weight: 600; color: var(--text-muted);">Version A</span>
+                            <span style="color: var(--accent); font-weight: 700; background: rgba(244, 63, 94, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Control</span>
                         </div>
                     </div>
                     <div class="glass reveal"
-                        style="padding: 30px; border-radius: 20px; border: 2px solid var(--primary);">
+                        style="padding: 25px; border-radius: 24px; border: 2px solid var(--primary); display: flex; flex-direction: column;">
                         <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&q=80&w=600"
-                            alt="Test B" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span>Version B</span>
-                            <span style="color: var(--primary); font-weight: 700;">Winner (+24%)</span>
+                            alt="Test B" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <span style="font-weight: 600; color: var(--text-muted);">Version B</span>
+                            <span style="color: var(--primary); font-weight: 700; background: rgba(99, 102, 241, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Winner (+24%)</span>
                         </div>
                     </div>
                 </div>
@@ -181,11 +181,10 @@
         <!-- Section 5: CTA -->
         <section style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
             <div class="container" style="text-align: center; color: white;">
-                <h2 style="color: white; font-size: 2.5rem;">Ready to be our next success story?</h2>
+                <h2 class="cta-title" style="color: white;">Ready to be our next success story?</h2>
                 <p style="margin: 25px 0 40px; font-size: 1.1rem; opacity: 0.9;">Apply for a free strategy session where
                     we'll map out your growth roadmap.</p>
-                <a href="contact.html" class="btn btn-outline hero-btn"
-                    style="background: white; color: var(--primary); border: none;">Book Strategy Call</a>
+                <a href="contact.html" class="btn btn-white hero-btn">Book a Free Audit</a>
             </div>
         </section>
     </main>
@@ -196,13 +195,13 @@
                 <div class="footer-col">
                     <a href="../index.html" class="logo" style="margin-bottom: 20px;">
                         <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                        <span class="brand-name">EmailFlow.</span>
+                        <span class="brand-name">EmailFlow</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for
                         scaling e-commerce brands. We turn your email list into a revenue machine.</p>
                     <div class="social-links">
                         <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-x-fill"></i></a>
                         <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
@@ -245,8 +244,7 @@
                     </form>
                 </div>
             </div>
-            <div
-                style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
             </div>
         </div>

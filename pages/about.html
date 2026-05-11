@@ -16,7 +16,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span
-                    class="brand-name">EmailFlow.</span></a>
+                    class="brand-name">EmailFlow</span></a>
             <nav id="desktop-nav">
                 <ul>
                     <li><a href="../index.html">Home 1</a></li>
@@ -45,7 +45,7 @@
         <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
             <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
         </div>
@@ -73,13 +73,12 @@
     <main>
         <!-- Section 1: Hero Section -->
         <section class="hero"
-            style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1920'); height: 35vh; min-height: 35vh;">
-            <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.8);"></div>
-            <div class="container" style="text-align: center;">
-                <div class="hero-content reveal" style="margin: 0 auto;">
-                    <h1>The Team Behind Your Revenue</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;">Data-driven marketers with a passion for e-commerce
-                        growth.</p>
+            style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920'); height: 45vh; min-height: 400px;">
+            <div class="hero-overlay"></div>
+            <div class="container" style="text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
+                <div class="hero-content reveal" style="margin: 0 auto; max-width: 800px; width: 100%;">
+                    <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 20px;">The Team Behind Your Revenue</h1>
+                    <p style="font-size: 1.4rem; opacity: 0.9; font-weight: 500;">Data-driven marketers with a passion for e-commerce growth.</p>
                 </div>
             </div>
         </section>
@@ -87,10 +86,10 @@
         <!-- Section 2: Story & Experience -->
         <section>
             <div class="container">
-                <div style="display: flex; align-items: center; gap: 80px; flex-wrap: wrap;">
-                    <div style="flex: 1; max-width: 480px;" class="reveal">
+                <div class="about-flex reveal" style="display: flex; align-items: center; gap: 80px; flex-wrap: wrap;">
+                    <div style="flex: 1; max-width: 400px;" class="reveal">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
-                            alt="Specialist" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow);">
+                            alt="Specialist" style="width: 100%; height: 350px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow);">
                     </div>
                     <div style="flex: 1;" class="reveal">
                         <h2 style="margin-bottom: 25px;">Rooted in Data, Driven by Results</h2>
@@ -100,7 +99,7 @@
                         <p style="margin-bottom: 20px; color: var(--text-muted);">We specialize in Klaviyo and
                             Mailchimp, but our philosophy goes beyond platforms. We focus on the customer journey,
                             psychology, and the numbers that matter to your bottom line.</p>
-                        <div style="display: flex; gap: 40px; margin-top: 40px;">
+                        <div class="about-stats" style="display: flex; gap: 40px; margin-top: 40px;">
                             <div>
                                 <h3 style="color: var(--primary);">8+</h3>
                                 <p style="font-size: 0.9rem; opacity: 0.7;">Years Experience</p>
@@ -121,25 +120,21 @@
                 <div style="text-align: center; margin-bottom: 60px;" class="reveal">
                     <h2>Our Toolkit</h2>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div class="glass reveal" style="padding: 30px; border-radius: 20px; text-align: center;">
-                        <img src="data:image/png;base64,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"
-                            alt="Klaviyo" style="height: 50px; margin-bottom: 20px;">
+                <div class="toolkit-grid" style="display: grid; gap: 25px;">
+                    <div class="tool-card reveal">
+                        <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&q=80&w=150" alt="Klaviyo">
                         <h4>Klaviyo Platinum</h4>
                     </div>
-                    <div class="glass reveal" style="padding: 30px; border-radius: 20px; text-align: center;">
-                        <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&q=80&w=150"
-                            alt="Mailchimp" style="height: 50px; margin-bottom: 20px;">
+                    <div class="tool-card reveal">
+                        <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&q=80&w=150" alt="Mailchimp">
                         <h4>Mailchimp Expert</h4>
                     </div>
-                    <div class="glass reveal" style="padding: 30px; border-radius: 20px; text-align: center;">
-                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=150"
-                            alt="Analytics" style="height: 50px; margin-bottom: 20px;">
+                    <div class="tool-card reveal">
+                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=150" alt="Analytics">
                         <h4>Google Analytics</h4>
                     </div>
-                    <div class="glass reveal" style="padding: 30px; border-radius: 20px; text-align: center;">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=150"
-                            alt="Shopify" style="height: 50px; margin-bottom: 20px;">
+                    <div class="tool-card reveal">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=150" alt="Shopify">
                         <h4>Shopify Partner</h4>
                     </div>
                 </div>
@@ -185,7 +180,7 @@
             style="background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1920');">
             <div class="hero-overlay"></div>
             <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
-                <h2 style="color: white;">Let's build something great together.</h2>
+                <h2 class="cta-title" style="color: white;">Let's build something great together.</h2>
                 <a href="contact.html" class="btn btn-primary" style="margin-top: 30px;">Work With Us</a>
             </div>
         </section>
@@ -197,13 +192,13 @@
                 <div class="footer-col">
                     <a href="../index.html" class="logo" style="margin-bottom: 20px;">
                         <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                        <span class="brand-name">EmailFlow.</span>
+                        <span class="brand-name">EmailFlow</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for
                         scaling e-commerce brands. We turn your email list into a revenue machine.</p>
                     <div class="social-links">
                         <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-x-fill"></i></a>
                         <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
@@ -246,8 +241,7 @@
                     </form>
                 </div>
             </div>
-            <div
-                style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
             </div>
         </div>

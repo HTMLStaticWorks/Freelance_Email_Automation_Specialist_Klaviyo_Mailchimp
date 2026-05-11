@@ -12,7 +12,7 @@
 
     <header id="header">
         <div class="nav-container">
-            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow</span></a>
             <nav id="desktop-nav">
                 <ul>
                     <li><a href="../index.html">Home 1</a></li>
@@ -40,7 +40,7 @@
         <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
             <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
         </div>
@@ -66,14 +66,15 @@
 
     <main>
         <!-- Section 1: Hero Section -->
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1920'); height: 35vh; min-height: 35vh;">
-            <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.85);"></div>
-            <div class="container" style="text-align: center;">
-                <div class="hero-content reveal" style="margin: 0 auto;">
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1920'); min-height: 45vh;">
+            <div class="hero-overlay"></div>
+            <div class="container" style="text-align: center; padding: 0 5%;">
+                <div class="hero-content reveal" style="margin: 0 auto; max-width: 800px;">
                     <h1>Proven Results for Modern Brands</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;">A collection of our most successful email automation architectures and campaign designs.</p>
+                    <p style="font-size: 1.1rem; opacity: 0.8; line-height: 1.5;">A collection of our most successful email automation architectures and campaign designs.</p>
                 </div>
-                </div>
+            </div>
         </section>
 
         <!-- Section 2: Email Template Gallery -->
@@ -83,7 +84,7 @@
                     <h2>Premium Template Design</h2>
                     <p style="color: var(--text-muted);">Conversion-focused layouts that look stunning on every device.</p>
                 </div>
-                <div class="feature-grid">
+                <div class="campaign-grid">
                     <!-- Portfolio 1 -->
                     <div class="feature-card glass reveal">
                         <div class="card-img">
@@ -118,52 +119,51 @@
                 </div>
         </section>
 
-        <!-- Section 3: Automation Flow Screenshots -->
-        <section style="background: var(--bg-card);">
+        <!-- Section 3: Architecture & Performance -->
+        <section style="background: var(--bg-card); padding: 100px 0;">
             <div class="container">
-                <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
-                    <div style="flex: 1;" class="reveal">
-                        <h2>Architecture of Success</h2>
-                        <p style="margin: 25px 0; color: var(--text-muted);">We build logic that scales. Our flows are not just single emails but entire sequences that adapt to subscriber behavior.</p>
-                        <div class="glass" style="padding: 30px; border-radius: 20px;">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Flow Screenshot" style="width: 100%; border-radius: 10px;">
-                </div>
-                </div>
-                    <div style="flex: 1;" class="reveal">
-                        <div class="glass" style="padding: 30px; border-radius: 20px;">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" alt="Flow Screenshot 2" style="width: 100%; border-radius: 10px;">
-                </div>
-                </div>
-                </div>
-                </div>
-        </section>
+                <div class="about-flex reveal" style="display: flex; align-items: flex-start; gap: 80px; flex-wrap: wrap;">
+                    <!-- Left Side: Architecture -->
+                    <div style="flex: 1.2; min-width: 300px;" class="reveal">
+                        <h2 style="margin-bottom: 25px;">Architecture of Success</h2>
+                        <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+                            We build logic that scales. Our flows are not just single emails but entire sequences that adapt to subscriber behavior, ensuring the right message hits at the right time.
+                        </p>
+                        <div class="architecture-images" style="display: flex; gap: 20px;">
+                            <div class="glass" style="padding: 15px; border-radius: 15px; flex: 1;">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Flow Screenshot" style="width: 100%; border-radius: 10px; display: block;">
+                            </div>
+                            <div class="glass" style="padding: 15px; border-radius: 15px; flex: 1;">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" alt="Flow Screenshot 2" style="width: 100%; border-radius: 10px; display: block;">
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Section 4: Results & Analytics Showcase -->
-        <section>
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 60px;" class="reveal">
-                    <h2>Hard Data</h2>
+                    <!-- Right Side: Performance -->
+                    <div style="flex: 1; min-width: 300px;" class="reveal">
+                        <h2 style="margin-bottom: 25px;">Proven Growth</h2>
+                        <div style="display: flex; flex-direction: column; gap: 25px;">
+                            <div class="glass" style="padding: 35px; border-radius: 24px; border-left: 4px solid var(--primary);">
+                                <span style="color: var(--primary); font-weight: 800; font-size: 2.8rem; display: block; line-height: 1;">+280%</span>
+                                <h4 style="margin: 15px 0 10px;">Revenue Growth</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">For an e-commerce jewelry brand within 6 months of implementation.</p>
+                            </div>
+                            <div class="glass" style="padding: 35px; border-radius: 24px; border-left: 4px solid var(--secondary);">
+                                <span style="color: var(--secondary); font-weight: 800; font-size: 2.8rem; display: block; line-height: 1;">$1.2M</span>
+                                <h4 style="margin: 15px 0 10px;">Attributed Sales</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">Generated through automated flows for a high-end furniture retailer.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
-                        <span style="color: var(--primary); font-weight: 800; font-size: 3rem;">+280%</span>
-                        <h4 style="margin: 10px 0;">Revenue Growth</h4>
-                        <p style="color: var(--text-muted);">For an e-commerce jewelry brand within 6 months of implementation.</p>
-                </div>
-                    <div class="glass reveal" style="padding: 40px; border-radius: 24px;">
-                        <span style="color: var(--secondary); font-weight: 800; font-size: 3rem;">$1.2M</span>
-                        <h4 style="margin: 10px 0;">Attributed Sales</h4>
-                        <p style="color: var(--text-muted);">Generated through automated flows for a high-end furniture retailer.</p>
-                </div>
-                </div>
-                </div>
+            </div>
         </section>
 
         <!-- Section 5: CTA Banner -->
         <section style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1920');">
             <div class="hero-overlay"></div>
             <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
-                <h2 style="color: white;">Want to see your brand here?</h2>
+                <h2 class="cta-title" style="color: white;">Want to see your brand here?</h2>
                 <p style="margin: 20px 0 40px; font-size: 1.1rem;">Let's discuss how we can replicate these results for your business.</p>
                 <a href="contact.html" class="btn btn-primary">Book Your Free Audit</a>
                 </div>
@@ -176,12 +176,12 @@
                 <div class="footer-col">
                     <a href="../index.html" class="logo" style="margin-bottom: 20px;">
                         <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                        <span class="brand-name">EmailFlow.</span>
+                        <span class="brand-name">EmailFlow</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for scaling e-commerce brands. We turn your email list into a revenue machine.</p>
                     <div class="social-links">
                         <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-x-fill"></i></a>
                         <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
                 </div>
                 </div>
@@ -221,9 +221,9 @@
                     </form>
                 </div>
                 </div>
-            <div style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
-                </div>
+            </div>
                 </div>
     </footer>
 

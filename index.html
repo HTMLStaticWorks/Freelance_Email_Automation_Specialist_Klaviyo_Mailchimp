@@ -23,7 +23,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
 
             <nav id="desktop-nav">
@@ -56,7 +56,7 @@
         <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
             <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
         </div>
@@ -239,10 +239,9 @@
                         <a href="pages/portfolio.html" class="btn btn-primary">See Flow Examples</a>
                     </div>
                     <div style="flex: 1; min-width: 300px; max-width: 500px;" class="reveal">
-                        <div class="glass floating" style="padding: 20px; border-radius: 30px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-                                alt="Automation Architecture" style="width: 100%; border-radius: 20px;">
-                        </div>
+                        <div class="glass feature-image-card" style="padding: 20px; border-radius: 40px; position: relative;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Intelligence" style="width: 100%; height: 100%; border-radius: 30px; box-shadow: var(--shadow); object-fit: cover;">
+            </div>
                     </div>
                 </div>
             </div>
@@ -257,19 +256,19 @@
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                    <div class="glass metric-card" style="padding: 30px; border-radius: 20px; text-align: center;">
                         <h4 style="color: var(--primary); font-size: 2rem; margin-bottom: 10px;">45%</h4>
                         <p style="font-weight: 600;">Avg. Open Rate</p>
                     </div>
-                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                    <div class="glass metric-card" style="padding: 30px; border-radius: 20px; text-align: center;">
                         <h4 style="color: var(--secondary); font-size: 2rem; margin-bottom: 10px;">8.2%</h4>
                         <p style="font-weight: 600;">Avg. Click Rate</p>
                     </div>
-                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                    <div class="glass metric-card" style="padding: 30px; border-radius: 20px; text-align: center;">
                         <h4 style="color: var(--accent); font-size: 2rem; margin-bottom: 10px;">35%</h4>
                         <p style="font-weight: 600;">Revenue from Email</p>
                     </div>
-                    <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
+                    <div class="glass metric-card" style="padding: 30px; border-radius: 20px; text-align: center;">
                         <h4 style="color: var(--primary); font-size: 2rem; margin-bottom: 10px;">12x</h4>
                         <p style="font-weight: 600;">ROI for Clients</p>
                     </div>
@@ -277,8 +276,8 @@
 
                 <div class="reveal"
                     style="margin-top: 50px; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow);">
-                    <img src="https://images.pexels.com/photos/4604639/pexels-photo-4604639.jpeg" alt="Analytics Chart"
-                        style="width: 100%; height: 400px; object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" alt="Analytics Dashboard"
+                        style="width: 100%; height: 500px; object-fit: cover;">
                 </div>
             </div>
         </section>
@@ -334,17 +333,13 @@
             <div class="container">
                 <div class="glass reveal"
                     style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 80px 40px; border-radius: 40px; text-align: center;">
-                    <h2 style="color: white; font-size: 3rem; margin-bottom: 20px;">Ready to automate your growth?</h2>
+                    <h2 class="cta-title" style="color: white; margin-bottom: 20px;">Ready to automate your growth?</h2>
                     <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Join 50+ brands scaling with
-                        EmailFlow. Book your free 30-min strategy audit today.</p>
+                        EmailFlow Book your free 30-min strategy audit today.</p>
 
-                    <form
-                        style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;"
-                        class="reveal">
-                        <input type="email" placeholder="Your work email"
-                            style="flex: 1; min-width: 280px; padding: 15px 25px; border-radius: 50px; border: none; outline: none; font-size: 1rem;">
-                        <button type="submit" class="btn"
-                            style="background: #0f172a; color: white; padding: 15px 35px;">Get Started</button>
+                    <form class="cta-form reveal">
+                        <input type="email" placeholder="Your work email" class="cta-input">
+                        <button type="submit" class="cta-btn">Get Started</button>
                     </form>
 
                     <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">No credit card required. Cancel
@@ -361,13 +356,13 @@
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px;">
                         <img src="assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                        <span class="brand-name">EmailFlow.</span>
+                        <span class="brand-name">EmailFlow</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for
                         scaling e-commerce brands. We turn your email list into a revenue machine.</p>
                     <div class="social-links">
                         <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-x-fill"></i></a>
                         <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
@@ -410,8 +405,7 @@
                     </form>
                 </div>
             </div>
-            <div
-                style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
             </div>
         </div>

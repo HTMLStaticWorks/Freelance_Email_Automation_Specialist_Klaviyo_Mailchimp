@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTheme = localStorage.getItem('theme') || 'light';
     updateIcons(currentTheme);
 
-    // Toggle logic
+    // Theme Toggle logic
     themeToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             const isDark = body.classList.contains('dark-theme');
@@ -33,6 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update Icons
             updateIcons(newTheme);
+        });
+    });
+
+    // RTL Toggle logic
+    const rtlToggles = document.querySelectorAll('#rtl-toggle, .rtl-toggle-btn');
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
         });
     });
 });

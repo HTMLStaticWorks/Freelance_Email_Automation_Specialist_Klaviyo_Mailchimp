@@ -12,7 +12,7 @@
 
     <header id="header">
         <div class="nav-container">
-            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow.</span></a>
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Logo" class="logo-icon"><span class="brand-name">EmailFlow</span></a>
             <nav id="desktop-nav">
                 <ul>
                     <li><a href="../index.html">Home 1</a></li>
@@ -40,7 +40,7 @@
         <div class="mobile-header" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                <span class="brand-name">EmailFlow.</span>
+                <span class="brand-name">EmailFlow</span>
             </a>
             <div id="mobile-close" style="font-size: 1.5rem; cursor: pointer;"><i class="ri-close-line"></i></div>
         </div>
@@ -66,20 +66,20 @@
 
     <main>
         <!-- Section 1: Hero Section -->
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?auto=format&fit=crop&q=80&w=1920'); height: 35vh; min-height: 35vh;">
-            <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.9);"></div>
-            <div class="container" style="text-align: center;">
-                <div class="hero-content reveal" style="margin: 0 auto;">
-                    <h1>Transparent Investment</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;">Premium email marketing that pays for itself. Choose the right level for your brand.</p>
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?auto=format&fit=crop&q=80&w=1920'); min-height: 45vh;">
+            <div class="hero-overlay"></div>
+            <div class="container" style="text-align: center; padding: 0 5%;">
+                <div class="hero-content reveal" style="margin: 0 auto; max-width: 800px;">
+                    <h1>Scale Your Revenue With Confidence</h1>
+                    <p style="font-size: 1.1rem; opacity: 0.8; line-height: 1.5;">Transparent pricing tailored to your brand's growth stage. No hidden fees, just results.</p>
                 </div>
-                </div>
+            </div>
         </section>
 
         <!-- Section 2: 3 Pricing Cards -->
         <section>
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <div class="campaign-grid">
                     <!-- Starter -->
                     <div class="glass reveal" style="padding: 50px; border-radius: 30px; text-align: center;">
                         <h4 style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px;">Starter</h4>
@@ -174,27 +174,42 @@
                 <div style="text-align: center; margin-bottom: 60px;" class="reveal">
                     <h2>Frequently Asked Questions</h2>
                 </div>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <div class="glass reveal" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
-                        <h4 style="display: flex; justify-content: space-between;">How long does setup take? <i class="ri-add-line"></i></h4>
-                </div>
-                    <div class="glass reveal" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
-                        <h4 style="display: flex; justify-content: space-between;">Do you provide the copy? <i class="ri-add-line"></i></h4>
-                </div>
-                    <div class="glass reveal" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
-                        <h4 style="display: flex; justify-content: space-between;">Can I cancel anytime? <i class="ri-add-line"></i></h4>
-                </div>
+                <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                    <div class="glass reveal faq-item" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
+                        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            How long does setup take? <i class="ri-add-line toggle-icon"></i>
+                        </h4>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all 0.4s ease;">
+                            <p style="padding-top: 20px; color: var(--text-muted);">Standard setup typically takes 5-7 business days. This includes technical integration, IP warming strategy, and your first 3 core automated flows.</p>
+                        </div>
+                    </div>
+                    <div class="glass reveal faq-item" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
+                        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            Do you provide the copy? <i class="ri-add-line toggle-icon"></i>
+                        </h4>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all 0.4s ease;">
+                            <p style="padding-top: 20px; color: var(--text-muted);">Yes, all our plans include professional direct-response copywriting tailored to your brand voice and conversion goals.</p>
+                        </div>
+                    </div>
+                    <div class="glass reveal faq-item" style="padding: 25px; border-radius: 15px; margin-bottom: 15px; cursor: pointer;">
+                        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            Can I cancel anytime? <i class="ri-add-line toggle-icon"></i>
+                        </h4>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all 0.4s ease;">
+                            <p style="padding-top: 20px; color: var(--text-muted);">Absolutely. We operate on a month-to-month basis with no long-term lock-in contracts. We believe in earning your business every single month.</p>
+                        </div>
+                    </div>
                 </div>
                 </div>
         </section>
 
         <!-- Section 5: CTA -->
         <section style="background-image: url('https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1920');">
-            <div class="hero-overlay" style="background: rgba(168, 85, 247, 0.9);"></div>
+            <div class="hero-overlay"></div>
             <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
-                <h2 style="color: white;">Not sure which plan is right?</h2>
+                <h2 class="cta-title" style="color: white;">Not sure which plan is right?</h2>
                 <p style="margin: 20px 0 40px; font-size: 1.1rem;">Let's jump on a quick discovery call to find the best fit for your brand.</p>
-                <a href="contact.html" class="btn btn-outline hero-btn" style="background: white; color: var(--secondary); border: none;">Book a Free Audit</a>
+                <a href="contact.html" class="btn btn-white hero-btn">Book a Free Audit</a>
                 </div>
         </section>
     </main>
@@ -205,12 +220,12 @@
                 <div class="footer-col">
                     <a href="../index.html" class="logo" style="margin-bottom: 20px;">
                         <img src="../assets/images/logo.svg" alt="EmailFlow" class="logo-icon">
-                        <span class="brand-name">EmailFlow.</span>
+                        <span class="brand-name">EmailFlow</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 25px;">Expert Klaviyo & Mailchimp automation for scaling e-commerce brands. We turn your email list into a revenue machine.</p>
                     <div class="social-links">
                         <a href="#" class="icon-btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="icon-btn"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="icon-btn"><i class="ri-twitter-x-fill"></i></a>
                         <a href="#" class="icon-btn"><i class="ri-instagram-line"></i></a>
                 </div>
                 </div>
@@ -250,9 +265,9 @@
                     </form>
                 </div>
                 </div>
-            <div style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; 2026 EmailFlow Specialists. All rights reserved.</p>
-                </div>
+            </div>
                 </div>
     </footer>
 
