@@ -61,6 +61,16 @@
     text-align: right;
 }
 
+/* Ensure hero content stays centered in all modes */
+.hero-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
 [dir="rtl"] .reveal-left {
     transform: translateX(50px);
 }
@@ -153,7 +163,7 @@ section {
 /* Buttons */
 .btn {
     padding: 0 28px;
-    height: 42px;
+    height: 44px;
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
@@ -329,8 +339,8 @@ nav ul li a.active {
 .icon-btn {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
