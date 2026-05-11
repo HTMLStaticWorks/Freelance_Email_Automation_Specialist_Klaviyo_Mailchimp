@@ -65,20 +65,23 @@
     </div>
 
     <main>
-        <!-- Section 1: Simple Hero -->
-        <section class="hero" style="background: var(--bg-card); min-height: 30vh; border-bottom: 1px solid var(--border);">
+        <!-- Section 1: Hero -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1920'); min-height: 40vh;">
+            <div class="hero-overlay"></div>
             <div class="container" style="text-align: center;">
                 <div class="hero-content reveal" style="margin: 0 auto;">
                     <h1>Get In Touch</h1>
-                    <p style="font-size: 1.2rem; color: var(--text-muted);">We're ready to scale your revenue. Let's start the conversation.</p>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">We're ready to scale your revenue. Let's start the
+                        conversation.</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: Contact Cards -->
-        <section style="padding: 60px 0 30px;">
+        <section style="padding: 60px 5% 30px;">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                     <div class="glass reveal" style="padding: 40px; border-radius: 24px; text-align: center; border: 1px solid var(--border);">
                         <div style="width: 60px; height: 60px; background: rgba(99, 102, 241, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="ri-mail-line" style="font-size: 1.8rem; color: var(--primary);"></i>
@@ -105,12 +108,12 @@
         </section>
 
         <!-- Section 3: Form & Map -->
-        <section style="padding: 40px 0 100px;">
+        <section style="padding: 40px 5% 100px;">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px;">
                     <!-- Contact Form -->
                     <div class="reveal">
-                        <h2 style="margin-bottom: 30px;">Send us a message</h2>
+                        <h2 style="margin-bottom: 30px; text-align: center;">Send us a message</h2>
                         <form style="display: grid; gap: 20px;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <input type="text" placeholder="First Name" style="padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-main);">
@@ -124,18 +127,26 @@
 
                     <!-- Map & Socials -->
                     <div class="reveal">
-                        <h2 style="margin-bottom: 30px;">Connect with us</h2>
+                        <h2 style="margin-bottom: 30px; text-align: center;">Connect with us</h2>
                         <div style="margin-bottom: 30px; border-radius: 24px; overflow: hidden; height: 300px; border: 1px solid var(--border);">
                             <!-- Static Map Placeholder -->
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617543883017!2d-73.98565568459392!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a145!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1652174112345!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
-                        <div class="glass" style="padding: 30px; border-radius: 20px;">
+                        <div class="glass" style="padding: 30px; border-radius: 20px; text-align: center;">
                             <h4 style="margin-bottom: 20px;">Follow our journey</h4>
-                            <div style="display: flex; gap: 15px;">
-                                <a href="#" class="icon-btn" style="width: 50px; height: 50px; background: var(--bg-body); border: 1px solid var(--border);"><i class="ri-linkedin-fill" style="font-size: 1.2rem;"></i></a>
-                                <a href="#" class="icon-btn" style="width: 50px; height: 50px; background: var(--bg-body); border: 1px solid var(--border);"><i class="ri-twitter-x-fill" style="font-size: 1.2rem;"></i></a>
-                                <a href="#" class="icon-btn" style="width: 50px; height: 50px; background: var(--bg-body); border: 1px solid var(--border);"><i class="ri-instagram-line" style="font-size: 1.2rem;"></i></a>
-                                <a href="#" class="icon-btn" style="width: 50px; height: 50px; background: var(--bg-body); border: 1px solid var(--border);"><i class="ri-youtube-line" style="font-size: 1.2rem;"></i></a>
+                            <div style="display: flex; gap: 15px; justify-content: center;">
+                                <a href="#" class="icon-btn" style="width: 50px; height: 50px;">
+                                    <i class="ri-linkedin-fill" style="font-size: 1.2rem;"></i>
+                                </a>
+                                <a href="#" class="icon-btn" style="width: 50px; height: 50px;">
+                                    <i class="ri-twitter-x-fill" style="font-size: 1.2rem;"></i>
+                                </a>
+                                <a href="#" class="icon-btn" style="width: 50px; height: 50px;">
+                                    <i class="ri-instagram-line" style="font-size: 1.2rem;"></i>
+                                </a>
+                                <a href="#" class="icon-btn" style="width: 50px; height: 50px;">
+                                    <i class="ri-youtube-line" style="font-size: 1.2rem;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

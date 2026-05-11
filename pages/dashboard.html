@@ -101,6 +101,33 @@
             [dir="rtl"] .sidebar.open { right: 0; box-shadow: -20px 0 50px rgba(0,0,0,0.1); }
         }
 
+        /* RTL Layout Fixes */
+        [dir="rtl"] .top-bar { 
+            left: 0; 
+            right: 280px; 
+        }
+        
+        @media (max-width: 1024px) {
+            [dir="rtl"] .top-bar { right: 0; }
+        }
+        
+        [dir="rtl"] .sidebar-menu a i {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        [dir="rtl"] .user-profile {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .stat-card {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .stat-card div:first-child {
+            flex-direction: row-reverse;
+        }
+
         /* Top Bar Responsive */
         @media (min-width: 1025px) {
             #dash-sidebar-toggle { display: none !important; }
@@ -114,9 +141,11 @@
         }
 
         @media (max-width: 480px) {
-            .top-bar { gap: 10px; }
-            .welcome-text h2 { font-size: 1rem !important; }
-            #rtl-toggle-text { display: none; }
+            .top-bar { gap: 8px; padding: 10px 15px; }
+            .welcome-text h2 { font-size: 0.95rem !important; }
+            .top-bar .icon-btn { width: 34px; height: 34px; font-size: 0.9rem; }
+            .user-profile { padding: 4px 8px !important; gap: 8px !important; }
+            .user-profile img { width: 30px !important; height: 30px !important; }
         }
 
         /* Table Responsive */
@@ -513,11 +542,16 @@
     <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Sidebar Toggle
+            // DOM Elements
+            const sidebar = document.getElementById('sidebar');
             const sidebarToggle = document.getElementById('dash-sidebar-toggle');
             const sidebarClose = document.getElementById('sidebar-close');
-            const sidebar = document.getElementById('sidebar');
-            
+            const menuItems = document.querySelectorAll('.sidebar-menu a');
+            const sections = document.querySelectorAll('.dashboard-section');
+            const pageHeading = document.getElementById('page-heading');
+            const mainContent = document.querySelector('.main-content');
+
+            // Sidebar Toggle Functionality
             sidebarToggle?.addEventListener('click', () => {
                 sidebar.classList.add('open');
             });
@@ -526,58 +560,64 @@
                 sidebar.classList.remove('open');
             });
 
-            // Section Switching Logic (Global for any data-section attribute)
-            const switchSection = (target) => {
-                // Update Sidebar Active State
-                menuItems.forEach(i => {
-                    i.classList.remove('active');
-                    if (i.getAttribute('data-section') === target) {
-                        i.classList.add('active');
+            // Section Switching Function
+            function switchSection(targetId) {
+                if (!targetId) return;
+
+                // 1. Update Sidebar Active State
+                menuItems.forEach(item => {
+                    const section = item.getAttribute('data-section');
+                    if (section === targetId) {
+                        item.classList.add('active');
+                        // Update Page Heading from sidebar text
+                        if (pageHeading) pageHeading.textContent = item.innerText.trim();
+                    } else {
+                        item.classList.remove('active');
                     }
                 });
 
-                // Update Heading
-                const activeItem = document.querySelector(`.sidebar-menu a[data-section="${target}"]`);
-                if (activeItem && pageHeading) {
-                    pageHeading.textContent = activeItem.textContent.trim();
-                }
-
-                // Switch Visibility
-                sections.forEach(sec => {
-                    sec.classList.remove('active');
-                    if (sec.id === target) {
-                        sec.classList.add('active');
+                // 2. Update Content Visibility
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
                     }
                 });
 
-                // Scroll main content back to top
-                const mainContent = document.querySelector('.main-content');
+                // 3. Scroll to Top
                 if (mainContent) mainContent.scrollTop = 0;
-            };
 
-            // Handle Sidebar Menu Clicks
+                // 4. Close Sidebar on Mobile
+                if (window.innerWidth <= 1024) {
+                    sidebar.classList.remove('open');
+                }
+            }
+
+            // Event Listener for Sidebar Links
             menuItems.forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
                     const target = item.getAttribute('data-section');
                     switchSection(target);
-
-                    // Close sidebar on mobile
-                    if (window.innerWidth <= 1024) {
-                        sidebar.classList.remove('open');
-                    }
                 });
             });
 
-            // Handle other data-section triggers (like the "View Report" button)
+            // Event Listener for other data-section triggers (buttons, etc)
             document.addEventListener('click', (e) => {
                 const trigger = e.target.closest('[data-section]:not(.sidebar-menu a)');
                 if (trigger) {
+                    e.preventDefault();
                     const target = trigger.getAttribute('data-section');
                     switchSection(target);
                 }
             });
 
+            // Initial state sync
+            const activeSection = document.querySelector('.dashboard-section.active');
+            if (activeSection) {
+                switchSection(activeSection.id);
+            }
         });
     </script>
     <script src="../assets/js/theme.js"></script>

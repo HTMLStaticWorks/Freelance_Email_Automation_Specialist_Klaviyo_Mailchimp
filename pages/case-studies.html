@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .card-img {
+            height: 180px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -140,7 +145,7 @@
                             segmented by skin type and purchase frequency, coupled with a robust win-back sequence for
                             dormant customers.</p>
                     </div>
-                    <div class="reveal feature-image-card" style="border-radius: 20px; overflow: hidden;">
+                    <div class="reveal feature-image-card" style="border-radius: 20px; overflow: hidden; height: 350px;">
                         <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg" alt="Graph"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -156,10 +161,10 @@
                     <p style="color: var(--text-muted);">How a single subject line test increased revenue by $15,000.
                     </p>
                 </div>
-                <div class="toolkit-grid reveal" style="display: grid; gap: 40px;">
+                <div class="reveal" style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
                     <div class="glass reveal" style="padding: 25px; border-radius: 24px; display: flex; flex-direction: column;">
                         <img src="https://images.pexels.com/photos/34007243/pexels-photo-34007243.jpeg" alt="Test A"
-                            style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <span style="font-weight: 600; color: var(--text-muted);">Version A</span>
                             <span style="color: var(--accent); font-weight: 700; background: rgba(244, 63, 94, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Control</span>
@@ -168,7 +173,7 @@
                     <div class="glass reveal"
                         style="padding: 25px; border-radius: 24px; border: 2px solid var(--primary); display: flex; flex-direction: column;">
                         <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&q=80&w=600"
-                            alt="Test B" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
+                            alt="Test B" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 25px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <span style="font-weight: 600; color: var(--text-muted);">Version B</span>
                             <span style="color: var(--primary); font-weight: 700; background: rgba(99, 102, 241, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Winner (+24%)</span>
@@ -179,12 +184,16 @@
         </section>
 
         <!-- Section 5: CTA -->
-        <section style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
-            <div class="container" style="text-align: center; color: white;">
-                <h2 class="cta-title" style="color: white;">Ready to be our next success story?</h2>
-                <p style="margin: 25px 0 40px; font-size: 1.1rem; opacity: 0.9;">Apply for a free strategy session where
-                    we'll map out your growth roadmap.</p>
-                <a href="contact.html" class="btn btn-white hero-btn">Book a Free Audit</a>
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=1920'); min-height: 400px;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h2 class="cta-title">Ready to be our next success story?</h2>
+                    <p style="margin-bottom: 40px; font-size: 1.1rem;">Apply for a free strategy session where
+                        we'll map out your growth roadmap.</p>
+                    <a href="contact.html" class="btn btn-primary hero-btn">Book a Free Audit</a>
+                </div>
             </div>
         </section>
     </main>

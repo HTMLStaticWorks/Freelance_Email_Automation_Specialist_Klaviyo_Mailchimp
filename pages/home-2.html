@@ -115,7 +115,7 @@
                     </div>
                     <div class="reveal" style="text-align: center;">
                         <div
-                            style="width: 80px; height: 80px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);">
+                            style="width: 80px; height: 80px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: var(--glow);">
                             2</div>
                         <h3>Technical Build</h3>
                         <p style="color: var(--text-muted);">Architecture of advanced flows, segmentation, and custom
@@ -123,7 +123,7 @@
                     </div>
                     <div class="reveal" style="text-align: center;">
                         <div
-                            style="width: 80px; height: 80px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: 0 0 20px rgba(244, 63, 94, 0.3);">
+                            style="width: 80px; height: 80px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: var(--glow);">
                             3</div>
                         <h3>Creative Content</h3>
                         <p style="color: var(--text-muted);">High-converting copy and premium design tailored to your
@@ -131,7 +131,7 @@
                     </div>
                     <div class="reveal" style="text-align: center;">
                         <div
-                            style="width: 80px; height: 80px; background: #10b981; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);">
+                            style="width: 80px; height: 80px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px; box-shadow: var(--glow);">
                             4</div>
                         <h3>Scale & Optimize</h3>
                         <p style="color: var(--text-muted);">Continuous A/B testing and data analysis to drive ongoing
@@ -200,16 +200,18 @@
         </section>
 
         <!-- Section 6: Final CTA -->
-        <section
-            style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1920'); min-height: 400px; display: flex; align-items: center;">
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1920'); min-height: 400px;">
             <div class="hero-overlay"></div>
-            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
-                <h2 class="cta-title" style="color: white;">Ready for your revenue audit?</h2>
-                <p style="margin: 20px 0 40px; font-size: 1.2rem;">Claim your free email marketing strategy session
-                    valued at $497.</p>
-                <a href="contact.html" class="btn btn-white hero-btn"
-                    style="padding: 18px 50px;">Book Call
-                    Now</a>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h2 class="cta-title">Ready for your revenue audit?</h2>
+                    <p style="margin-bottom: 40px; font-size: 1.2rem;">Claim your free email marketing strategy session
+                        valued at $497.</p>
+                    <a href="contact.html" class="btn btn-primary hero-btn"
+                        style="padding: 18px 50px;">Book Call
+                        Now</a>
+                </div>
             </div>
         </section>
     </main>
