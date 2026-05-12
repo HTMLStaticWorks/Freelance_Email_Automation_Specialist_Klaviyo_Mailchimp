@@ -139,7 +139,29 @@
             .main-content { padding-top: 70px; padding-left: 20px; padding-right: 20px; }
             .top-bar { padding: 0 15px; height: 70px; display: flex; align-items: center; }
             .welcome-text p { display: none !important; }
-            #dash-sidebar-toggle { width: 36px !important; height: 36px !important; font-size: 1.4rem !important; }
+            #dash-sidebar-toggle { 
+                width: 36px !important; 
+                height: 36px !important; 
+                font-size: 1.4rem !important; 
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-top: 0 !important;
+            }
+            /* Alignment Fixes */
+            .top-bar > div:first-child { gap: 15px !important; align-items: center !important; }
+            .welcome-text { 
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                height: 36px !important;
+            }
+            #page-heading { 
+                line-height: 1 !important; 
+                margin: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+            }
         }
 
         @media (max-width: 480px) {
