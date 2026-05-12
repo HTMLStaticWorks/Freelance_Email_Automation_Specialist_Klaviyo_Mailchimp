@@ -137,8 +137,9 @@
 
         @media (max-width: 991px) {
             .main-content { padding-top: 70px; padding-left: 20px; padding-right: 20px; }
-            .top-bar { padding: 0 20px; height: 70px; }
+            .top-bar { padding: 0 15px; height: 70px; display: flex; align-items: center; }
             .welcome-text p { display: none !important; }
+            #dash-sidebar-toggle { width: 36px !important; height: 36px !important; font-size: 1.4rem !important; }
         }
 
         @media (max-width: 480px) {
@@ -205,11 +206,13 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="top-bar">
-                <div style="display: flex; align-items: center; gap: 20px;">
-                    <div class="mobile-toggle" id="dash-sidebar-toggle" style="display: flex; align-items: center; font-size: 1.6rem; cursor: pointer; color: var(--primary);"><i class="ri-menu-4-line"></i></div>
-                    <div class="welcome-text" style="display: flex; align-items: center;">
-                        <h2 id="page-heading" style="font-size: 1.2rem; font-weight: 700; margin: 0; color: var(--text-main); line-height: 1;">Dashboard</h2>
-                        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0 0 0 10px; display: block;">Welcome back, Alex!</p>
+                <div style="display: flex; align-items: center; gap: 20px; height: 100%;">
+                    <div class="mobile-toggle" id="dash-sidebar-toggle" style="display: flex; align-items: center; justify-content: center; font-size: 1.6rem; cursor: pointer; color: var(--primary); height: 42px; width: 42px; margin-top: 0;">
+                        <i class="ri-menu-4-line"></i>
+                    </div>
+                    <div class="welcome-text" style="display: flex; flex-direction: column; justify-content: center;">
+                        <h2 id="page-heading" style="font-size: 1.1rem; font-weight: 700; margin: 0; color: var(--text-main); line-height: 1.2;">Dashboard</h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; display: block; line-height: 1.2;">Welcome back, Alex!</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 15px;">
