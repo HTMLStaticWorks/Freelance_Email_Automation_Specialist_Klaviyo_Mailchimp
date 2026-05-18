@@ -150,6 +150,20 @@ section {
     overflow: hidden;
 }
 
+/* Premium Responsive Section Headings — applies to all content sections, excluding hero overlays and CTA banners */
+section:not(.hero) h2:not(.cta-title) {
+    font-size: clamp(2rem, 4vw, 2.75rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 20px !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+    section:not(.hero) h2:not(.cta-title) {
+        font-size: clamp(1.6rem, 6vw, 2rem) !important;
+    }
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -199,6 +213,35 @@ section {
 .btn-outline:hover {
     background: var(--primary);
     color: white;
+}
+
+/* RTL / LTR Text Toggle Button */
+#rtl-toggle,
+.rtl-toggle-btn {
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    min-width: 58px;
+}
+
+#rtl-toggle:hover,
+.rtl-toggle-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: var(--glow);
 }
 
 .btn-sm {
@@ -399,6 +442,8 @@ nav ul li a.active {
 
 /* Hero Base */
 .hero {
+    --hero-text: #ffffff;
+    --hero-overlay: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7));
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -442,9 +487,9 @@ nav ul li a.active {
 .hero-content h2,
 .hero-content h3 {
     color: var(--hero-text);
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 25px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .hero-content h1 {
@@ -458,6 +503,12 @@ nav ul li a.active {
 .hero-content p {
     color: var(--hero-text);
     opacity: 0.9;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.hero-content .btn {
+    font-weight: 500;
 }
 
 .hero-stats {
@@ -483,22 +534,17 @@ nav ul li a.active {
     color: var(--hero-text);
     font-size: 2.2rem;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .hero-stats p {
     font-size: 0.95rem;
     opacity: 0.8;
     color: var(--hero-text);
+    font-weight: 400;
 }
 
-.light-theme .hero-content h1,
-.light-theme .hero-content h2,
-.light-theme .hero-content h3,
-.light-theme .hero-content p,
-.light-theme .hero-stats h3,
-.light-theme .hero-stats p {
-    color: var(--text-main) !important;
-}
+/* Removed forced light-theme dark text overrides on hero to keep text perfectly readable over background images */
 
 /* Footer */
 footer {
@@ -851,6 +897,7 @@ footer {
     overflow: hidden;
     width: 100%;
     height: 250px; /* Fixed height for consistent vertical look */
+    margin-bottom: 20px; /* Spacing between image and card heading */
 }
 
 .card-img img {
