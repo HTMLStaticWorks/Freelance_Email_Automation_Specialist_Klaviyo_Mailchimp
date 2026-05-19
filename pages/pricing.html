@@ -30,6 +30,13 @@
                 max-width: 480px;
                 margin: 0 auto;
             }
+            /* Centre the bullet list block inside the centred 3rd card */
+            .pricing-grid > .glass:nth-child(3) ul {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
         }
 
         /* Tablet (up to 767px): single column, all cards centred */
@@ -44,6 +51,13 @@
                 margin: 0 auto;
                 /* Remove the scale on the popular card to avoid overflow */
                 transform: none !important;
+            }
+            /* Centre the bullet list block inside centred cards on mobile */
+            .pricing-grid > .glass:nth-child(3) ul {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
             }
             /* Feature list left-align inside centred card */
             .pricing-grid ul {

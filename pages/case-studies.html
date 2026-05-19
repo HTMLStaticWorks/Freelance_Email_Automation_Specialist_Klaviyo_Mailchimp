@@ -32,7 +32,15 @@
             }
         }
 
-        /* A/B cards — single row on mobile */
+        /* Case study cards — single column on mobile */
+        @media (max-width: 767px) {
+            .campaign-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+        }
+
+        /* A/B cards — stack one per row on mobile */
         .ab-cards-container {
             display: flex;
             gap: 30px;
@@ -46,25 +54,23 @@
         }
         @media (max-width: 767px) {
             .ab-cards-container {
-                flex-wrap: nowrap;
-                gap: 12px;
+                flex-direction: column;
                 align-items: stretch;
+                gap: 20px;
             }
             .ab-card {
                 min-width: 0 !important;
                 max-width: 100% !important;
-                padding: 16px !important;
+                width: 100% !important;
+                padding: 24px !important;
             }
             .ab-card .ab-subject-box {
-                padding: 12px !important;
-                margin-bottom: 15px !important;
-            }
-            .ab-card .ab-subject-box p:last-child {
-                font-size: 0.8rem !important;
+                padding: 15px !important;
+                margin-bottom: 20px !important;
             }
             .ab-card .ab-header span:last-child {
-                font-size: 0.65rem !important;
-                padding: 4px 8px !important;
+                font-size: 0.7rem !important;
+                padding: 4px 10px !important;
             }
         }
     </style>

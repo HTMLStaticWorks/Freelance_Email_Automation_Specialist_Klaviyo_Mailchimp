@@ -106,7 +106,8 @@
 .auth-controls {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -114,8 +115,8 @@
 }
 
 [dir="rtl"] .auth-controls {
-    left: auto;
-    right: 20px;
+    right: auto;
+    left: 20px;
 }
 
 *  {
@@ -801,12 +802,19 @@ footer {
 }
 
 .services-section {
-    padding: 60px 5% !important;
+    padding: 100px 5% !important;
 }
 
 @media (max-width: 768px) {
     .services-section {
-        padding: 40px 5% !important;
+        padding: 60px 5% !important;
+    }
+}
+
+/* Push Learn More button down on mobile/tablet (flex: 1 on <p> only works when card has fixed height) */
+@media (max-width: 1023px) {
+    .services-grid .card-content .btn {
+        margin-top: 20px;
     }
 }
 
@@ -1329,8 +1337,12 @@ footer {
     display: block;
 }
 
-.services-section {
-    padding: 20px 0 !important;
+@media (min-width: 1025px) {
+    .conversion-image img {
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .services-section .tool-card {
@@ -1540,14 +1552,15 @@ footer {
     }
 }
 
-/* Auth Pages Controls */
+/* Auth Pages Controls (responsive overrides) */
 .auth-controls {
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
+    left: auto;
     display: flex;
-    gap: 15px;
-    z-index: 1000;
+    gap: 10px;
+    z-index: 9999;
 }
 
 @media (max-width: 1024px) {
@@ -1555,6 +1568,11 @@ footer {
         position: absolute;
         top: 25px;
         right: 25px;
+        left: auto;
+    }
+    [dir="rtl"] .auth-controls {
+        right: auto;
+        left: 25px;
     }
     .login-card {
         margin-top: 70px;
@@ -1565,6 +1583,11 @@ footer {
     .auth-controls {
         top: 10px !important;
         right: 10px !important;
+        left: auto !important;
+    }
+    [dir="rtl"] .auth-controls {
+        right: auto !important;
+        left: 10px !important;
     }
     .auth-controls .icon-btn {
         width: 36px !important;
