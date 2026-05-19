@@ -3,6 +3,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlToggles = document.querySelectorAll('#rtl-toggle, .rtl-toggle-btn');
     const body = document.body;
 
+    const getSavedState = (key, fallback) => {
+        try {
+            const val = localStorage.getItem(key);
+            if (val) return val;
+        } catch (e) {}
+
+        try {
+            if (window.name) {
+                const state = JSON.parse(window.name);
+                if (state && state[key]) {
+                    return state[key];
+                }
+            }
+        } catch (e) {}
+
+        return fallback;
+    };
+
+    const saveState = (key, value) => {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {}
+
+        try {
+            let state = {};
+            if (window.name) {
+                try {
+                    state = JSON.parse(window.name);
+                } catch (e) {}
+            }
+            if (typeof state !== 'object' || state === null) {
+                state = {};
+            }
+            state[key] = value;
+            window.name = JSON.stringify(state);
+        } catch (e) {}
+    };
+
     // Function to update the theme icons
     const updateIcons = (theme) => {
         themeToggles.forEach(btn => {
@@ -22,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Initialize Theme & Direction UI
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    const currentDir = localStorage.getItem('dir') || document.documentElement.getAttribute('dir') || 'ltr';
+    const currentTheme = getSavedState('theme', 'light');
+    const currentDir = getSavedState('dir', 'ltr');
     updateIcons(currentTheme);
     updateRtlLabel(currentDir);
 
@@ -38,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.add(`${newTheme}-theme`);
             });
 
-            localStorage.setItem('theme', newTheme);
+            saveState('theme', newTheme);
             updateIcons(newTheme);
         });
     });
@@ -50,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
 
             document.documentElement.setAttribute('dir', newDir);
-            localStorage.setItem('dir', newDir);
+            saveState('dir', newDir);
             updateRtlLabel(newDir);
         });
     });

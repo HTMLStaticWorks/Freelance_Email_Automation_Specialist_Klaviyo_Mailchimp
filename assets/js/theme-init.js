@@ -1,6 +1,24 @@
 (function () {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    const savedDir = localStorage.getItem('dir') || 'ltr';
+    const getSavedState = (key, fallback) => {
+        try {
+            const val = localStorage.getItem(key);
+            if (val) return val;
+        } catch (e) {}
+
+        try {
+            if (window.name) {
+                const state = JSON.parse(window.name);
+                if (state && state[key]) {
+                    return state[key];
+                }
+            }
+        } catch (e) {}
+
+        return fallback;
+    };
+
+    const savedTheme = getSavedState('theme', 'light');
+    const savedDir = getSavedState('dir', 'ltr');
     document.documentElement.setAttribute('dir', savedDir);
 
     // Apply theme to documentElement immediately to prevent flicker

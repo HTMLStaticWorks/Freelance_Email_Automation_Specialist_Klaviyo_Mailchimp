@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,49 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
     <link rel="stylesheet" href="../assets/css/style.css?v=1.1">
+    <style>
+        /* Pricing grid layout */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* At exactly ~1024px: show 2 columns, 3rd card centred */
+        @media (min-width: 768px) and (max-width: 1099px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                justify-items: center;
+            }
+            /* 3rd card spans full row and centres itself */
+            .pricing-grid > .glass:nth-child(3) {
+                grid-column: 1 / -1;
+                width: 100%;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Tablet (up to 767px): single column, all cards centred */
+        @media (max-width: 767px) {
+            .pricing-grid {
+                grid-template-columns: 1fr !important;
+                justify-items: center;
+            }
+            .pricing-grid > .glass {
+                width: 100%;
+                max-width: 480px;
+                margin: 0 auto;
+                /* Remove the scale on the popular card to avoid overflow */
+                transform: none !important;
+            }
+            /* Feature list left-align inside centred card */
+            .pricing-grid ul {
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,8 +66,8 @@
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="case-studies.html">Case Studies</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -53,8 +96,8 @@
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="pricing.html" class="active">Pricing</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
         <div class="mobile-nav-footer">
             <div class="mobile-nav-btns">

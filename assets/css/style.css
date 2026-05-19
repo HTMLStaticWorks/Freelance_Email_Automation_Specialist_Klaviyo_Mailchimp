@@ -102,15 +102,23 @@
     display: inline-block;
 }
 
-[dir="rtl"] nav ul {
-    flex-direction: row-reverse;
+/* Auth Pages Controls — fixed corner pill */
+.auth-controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-[dir="rtl"] .header-actions {
-    flex-direction: row-reverse;
+[dir="rtl"] .auth-controls {
+    left: auto;
+    right: 20px;
 }
 
-* {
+*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

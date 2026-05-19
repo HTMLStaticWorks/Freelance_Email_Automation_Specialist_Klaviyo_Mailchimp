@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -102,19 +102,37 @@
             [dir="rtl"] .sidebar.open { right: 0; box-shadow: -20px 0 50px rgba(0,0,0,0.1); }
         }
 
-        /* RTL Layout Fixes */
-        [dir="rtl"] .top-bar { 
-            left: 0; 
-            right: 280px; 
+        /* ── RTL Layout Fixes ── */
+
+        /* Top-bar: mirror left/right groups */
+        [dir="rtl"] .top-bar {
+            left: 0;
+            right: 280px;
+            flex-direction: row-reverse;
+            transition: right 0.3s ease;
         }
-        
         @media (max-width: 991px) {
-            [dir="rtl"] .top-bar { right: 0; }
+            [dir="rtl"] .top-bar { right: 0; left: 0; }
         }
-        
-        [dir="rtl"] .sidebar-menu a i {
-            margin-left: 0;
-            margin-right: 0;
+
+        /* Reverse items inside each top-bar flex group */
+        [dir="rtl"] .top-bar > div {
+            flex-direction: row-reverse;
+        }
+
+        /* Welcome text right-align */
+        [dir="rtl"] .welcome-text {
+            text-align: right;
+        }
+
+        /* Sidebar border: left side in RTL (sidebar sits on right) */
+        [dir="rtl"] .sidebar {
+            border-right: none;
+            border-left: 1px solid var(--border);
+        }
+
+        [dir="rtl"] .sidebar-menu a {
+            flex-direction: row-reverse;
         }
 
         [dir="rtl"] .user-profile {
@@ -124,8 +142,12 @@
         [dir="rtl"] .stat-card {
             text-align: right;
         }
-        
-        [dir="rtl"] .stat-card div:first-child {
+
+        [dir="rtl"] .stat-card > div:first-child {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .logout-btn {
             flex-direction: row-reverse;
         }
 
@@ -187,6 +209,42 @@
             .stat-card h3 { font-size: 1.3rem !important; }
             .ab-test-flex { flex-direction: column !important; gap: 20px !important; }
             .ab-test-flex .vs-badge { transform: none !important; margin: 20px 0; width: 100%; text-align: center; }
+        }
+
+        /* ── Flow Toggle Switch ── */
+        .flow-toggle {
+            width: 48px;
+            height: 26px;
+            background: var(--border);
+            border-radius: 13px;
+            position: relative;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            outline: none;
+        }
+        .flow-toggle.is-on {
+            background: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+        .flow-toggle-knob {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        }
+        .flow-toggle.is-on .flow-toggle-knob {
+            left: 25px;
+        }
+        .flow-toggle:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -402,29 +460,38 @@
                     <button class="btn btn-primary">Build New Flow</button>
                 </div>
                 <div class="stat-grid">
+                    <!-- Flow 1: Welcome Series (ON) -->
                     <div class="stat-card glass" style="display: flex; justify-content: space-between; align-items: center;">
                         <div>
                             <h4>Welcome Series</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">5 Emails • Active</p>
-                </div>
-                        <div style="width: 40px; height: 20px; background: var(--primary); border-radius: 20px; position: relative; cursor: pointer;"><div style="width: 16px; height: 16px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div></div>
-                </div>
+                            <p class="flow-status" data-emails="5 Emails" style="font-size: 0.8rem; color: var(--text-muted);">5 Emails &bull; Active</p>
+                        </div>
+                        <button class="flow-toggle is-on" aria-label="Toggle Welcome Series" aria-pressed="true">
+                            <div class="flow-toggle-knob"></div>
+                        </button>
+                    </div>
+                    <!-- Flow 2: Abandoned Cart (ON) -->
                     <div class="stat-card glass" style="display: flex; justify-content: space-between; align-items: center;">
                         <div>
                             <h4>Abandoned Cart</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">3 Emails • Active</p>
-                </div>
-                        <div style="width: 40px; height: 20px; background: var(--primary); border-radius: 20px; position: relative; cursor: pointer;"><div style="width: 16px; height: 16px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div></div>
-                </div>
+                            <p class="flow-status" data-emails="3 Emails" style="font-size: 0.8rem; color: var(--text-muted);">3 Emails &bull; Active</p>
+                        </div>
+                        <button class="flow-toggle is-on" aria-label="Toggle Abandoned Cart" aria-pressed="true">
+                            <div class="flow-toggle-knob"></div>
+                        </button>
+                    </div>
+                    <!-- Flow 3: Post-Purchase (OFF) -->
                     <div class="stat-card glass" style="display: flex; justify-content: space-between; align-items: center;">
                         <div>
                             <h4>Post-Purchase</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">2 Emails • Paused</p>
+                            <p class="flow-status" data-emails="2 Emails" style="font-size: 0.8rem; color: var(--text-muted);">2 Emails &bull; Paused</p>
+                        </div>
+                        <button class="flow-toggle" aria-label="Toggle Post-Purchase" aria-pressed="false">
+                            <div class="flow-toggle-knob"></div>
+                        </button>
+                    </div>
                 </div>
-                        <div style="width: 40px; height: 20px; background: var(--border); border-radius: 20px; position: relative; cursor: pointer;"><div style="width: 16px; height: 16px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px;"></div></div>
-                </div>
-                </div>
-                </div>
+            </div>
 
             <div id="audience" class="dashboard-section">
                 <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
@@ -645,6 +712,24 @@
             if (activeSection) {
                 switchSection(activeSection.id);
             }
+        });
+
+        // ── Flow Toggle Logic ──
+        document.querySelectorAll('.flow-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const isNowOn = toggle.classList.toggle('is-on');
+                toggle.setAttribute('aria-pressed', isNowOn);
+
+                // Update the status text in the same card
+                const card = toggle.closest('.stat-card');
+                if (card) {
+                    const statusEl = card.querySelector('.flow-status');
+                    if (statusEl) {
+                        const emails = statusEl.dataset.emails || '';
+                        statusEl.textContent = `${emails} \u2022 ${isNowOn ? 'Active' : 'Paused'}`;
+                    }
+                }
+            });
         });
     </script>
     <script src="../assets/js/theme.js"></script>
