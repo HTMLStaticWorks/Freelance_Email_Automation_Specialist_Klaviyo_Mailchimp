@@ -61,6 +61,35 @@
     text-align: right;
 }
 
+[dir="rtl"] .text-right { text-align: right !important; }
+[dir="rtl"] .text-left { text-align: left !important; }
+[dir="rtl"] .flex-row-reverse { flex-direction: row-reverse !important; }
+[dir="rtl"] .flex-row { flex-direction: row !important; }
+
+/* Password visibility toggle RTL alignment */
+[dir="rtl"] #toggle-password {
+    right: auto !important;
+    left: 15px !important;
+}
+
+[dir="rtl"] .toggle-pass {
+    right: auto !important;
+    left: 12px !important;
+}
+
+[dir="rtl"] input[id="password"],
+[dir="rtl"] input[id="confirm-password"] {
+    padding-right: 12px !important;
+    padding-left: 40px !important;
+}
+
+/* Specific override for login page input to align with LTR padding structure */
+[dir="rtl"] .login-card input[id="password"] {
+    padding-right: 15px !important;
+    padding-left: 45px !important;
+}
+
+
 /* Ensure hero content stays centered in all modes */
 .hero-content {
     text-align: center !important;
@@ -93,14 +122,7 @@
     left: 0;
 }
 
-[dir="rtl"] .logo {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .brand-name {
-    direction: ltr;
-    display: inline-block;
-}
+/* Logo & brand alignment is handled natively via RTL flex-direction row */
 
 /* Auth Pages Controls — fixed corner pill */
 .auth-controls {
